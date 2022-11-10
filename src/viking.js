@@ -31,16 +31,30 @@ class Viking extends Soldier{
        receiveDamage(theDamage) {
         this.health -= theDamage
         if(this.health>0){
-            return (`${this.name} has received ${theDamage} points`);
+             return (`${this.name} has received ${theDamage} points of damage`);
         }else{
-            return (`${this.name} has died in act of combat`);
+           return  (`${this.name} has died in act of combat`);
         }
         }    
         
+        battleCry(){
+
+            return 'Odin Owns You All!'
+        }
 }
 
 // Saxon
-class Saxon {}
+class Saxon extends Soldier{
+    
+    receiveDamage(theDamage){
+        this.health -= theDamage
+        if(this.health>0){
+            return (`A Saxon has received ${theDamage} points of damage`)
+        }else {
+            return 'A Saxon has died in combat'
+        }
+    }
+}
 
 // War
 class War {}
